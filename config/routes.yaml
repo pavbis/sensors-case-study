@@ -1,0 +1,15 @@
+sensor_mesurements:
+  path: /api/v1/sensors/{sensorId<\b[0-9a-f]{8}\b-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-\b[0-9a-f]{12}\b>}/measurements
+  methods: [POST]
+  controller: App\UI\API\V1\Controller\RecordSensorDataController::sensorMeasurements
+
+sensor_status:
+  path: /api/v1/sensors/{sensorId<\b[0-9a-f]{8}\b-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-\b[0-9a-f]{12}\b>}
+  methods: [GET]
+  controller: App\UI\API\V1\Controller\SensorStatusController::sensorStatus
+
+sensor_metrics:
+  path: /api/v1/sensors/{sensorId<\b[0-9a-f]{8}\b-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-\b[0-9a-f]{12}\b>}/metrics
+  methods: [GET]
+  controller: App\UI\API\V1\Controller\SensorMetricsController::sensorMetrics
+
